@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,23 +9,27 @@
 
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
-    
+
     <%- include('partials/header.ejs') %>
-    <%- include('partials/nav.ejs') %>  
+    <%- include('partials/nav.ejs') %>
 
-    <!-- navigering -->
+    <main>
 
-    <h1>Välkommen till start sidan</h1>
-    <p>En statisk fil ska kunna visas av en webbserver</p>
+        <h1>Välkommen till start sidan</h1>
+        <p>En statisk fil ska kunna visas av en webbserver</p>
 
-    <p>Ett äppelträd är trevligt</p>
-    <img src="images/apple-tree.jpg" alt="Ett äppelträd med två olika sorter">
+        <p>Ett äppelträd är trevligt</p>
+        <img src="images/apple-tree.jpg" alt="Ett äppelträd med två olika sorter">
 
-    <p>Ett päronträd är oxå trevligt</p>
-    <img src="images/pear-tree.jpg" alt="Ett päronträd">
+        <p>Ett päronträd är oxå trevligt</p>
+        <img src="images/pear-tree.jpg" alt="Ett päronträd">
 
-    <%- include('partials/footer.ejs') %>  
+    </main>
+
+    <%- include('partials/footer.ejs') %>
 
 </body>
+
 </html>
