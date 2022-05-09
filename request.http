@@ -1,0 +1,15 @@
+@host = http://localhost:3000
+
+###
+GET {{host}}/contact
+
+###
+GET {{host}}/abc
+
+###
+POST {{host}}/api
+Content-Type: application/json
+
+{
+    "email": "flisa@stockholmen.se"
+}

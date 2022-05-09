@@ -12,6 +12,22 @@ const port = 3000;
 app.set('view engine', 'ejs');
 
 // listen to requests
+app.use('*', (req, res, next) => {
+    // console.log(`Server handle: ${req.method} to ${req.baseUrl}`);
+    next();
+});
+
+// handle form post
+app.use(express.json());
+app.use(express.urlencoded({ extended: true}));
+
+import routePost from './routes/post.js';
+app.use('/api', routePost);
+
+// all other posts ... redirect to start page
+app.post('*', (req, res) => {
+    res.redirect('/');
+});
 
 // use route modules
 import routeStart from './routes/start.js';
