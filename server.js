@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 
 // listen to requests
 app.use('*', (req, res, next) => {
-    // console.log(`Server handle: ${req.method} to ${req.baseUrl}`);
+    console.log(`Server handle: ${req.method} to ${req.baseUrl}`);
     next();
 });
 
