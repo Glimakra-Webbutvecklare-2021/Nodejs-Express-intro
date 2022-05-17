@@ -11,18 +11,29 @@ const port = 3000;
 // set template engine to ejs
 app.set('view engine', 'ejs');
 
+// handle form post
+app.use(express.urlencoded({extended: true}));
+
 // listen to requests
 
-// use route modules
-import routeStart from './routes/start.js';
+// use route / controller modules
+import routeStart from './controllers/start.js';
 app.use('/start', routeStart);
 app.use('/', routeStart);
 
-import routeContact from './routes/contact.js';
+import routeContact from './controllers/contact.js';
 app.use('/contact', routeContact);
 
-import routeAbout from './routes/about.js';
+import routeAbout from './controllers/about.js';
 app.use('/about', routeAbout);
+
+// apple controller
+import appleController from './controllers/appleController.js'
+app.get('/apples', appleController.getAll);
+app.post('/apples', appleController.addOne);
+
+
+
 
 // serve static files
 app.use(express.static('public'));

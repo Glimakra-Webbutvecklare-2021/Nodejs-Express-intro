@@ -1,7 +1,7 @@
 import express from 'express';
 const router = express.Router();
 
-let obj = {user: "Flisa Hedenhös", navigationLinks: ["Start", "About", "Contact"], page: "contact"};
+let obj = {user: "Flisa Hedenhös", navigationLinks: ["Start", "About", "Contact", "Apples"], page: "contact"};
 
 router.route('/')
     .get((req, res) => {
